@@ -1,4 +1,4 @@
-package practice.accessModifier;
+package day39.accessModifier;
 
 public class AccessModifier {
 

@@ -1,4 +1,4 @@
-package practice.car;
+package day39.car;
 
 public class Car {
 

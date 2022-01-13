@@ -1,4 +1,4 @@
-package practice.customClass;
+package day39.customClass;
 
 public class CustomClassIntro {
 
