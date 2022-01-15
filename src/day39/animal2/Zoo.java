@@ -1,4 +1,7 @@
-package day39.Animal2;
+package day39.animal2;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Zoo {
 
@@ -10,6 +13,8 @@ public class Zoo {
         Crocodile crocodile1 = new Crocodile("slow","north","Medium","Green",'F',2,true,false,false);
         Dog dog1 = new Dog("Kurt","Sivas Kangal","Large","Grey",'M',2,false,true,true);
         Dolphin dolphin1 = new Dolphin("Yunus", "anadolu","medium","Cream",'f',2,false,true,false);
+        Lion lion1 = new Lion("lion","anadol", "medium","grey",'F',2,true,false,false);
+        Eagle eagle1 = new Eagle("Sahin","mountain","medium","grey",'M',3,true,false,false);
 
         System.out.println(cat1);
 
@@ -19,6 +24,25 @@ public class Zoo {
         bear1.hunt();
         cat1.meow();
         System.out.println(dolphin1);
+
+
+        ArrayList<FriendlyAnimal> list = new ArrayList<>();
+        list.addAll(Arrays.asList(dog1,dolphin1,cat1));
+
+        for (FriendlyAnimal each : list) {
+            System.out.printf( each.getColor());
+
+        }
+
+
+        ArrayList<WildAnimal> list2 = new ArrayList<>();
+        list2.addAll(Arrays.asList(bear1,crocodile1,lion1,eagle1));
+
+
+        for (WildAnimal each : list2) {
+            System.out.println(each.getAge());
+        }
+
 
 
 

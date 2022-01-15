@@ -1,6 +1,4 @@
-package day39.Animal2;
-
-import java.sql.SQLOutput;
+package day39.animal2;
 
 public class Animal {
 
@@ -103,7 +101,7 @@ public class Animal {
     public void setGender(char gender) {
 
         if (!(gender== 'F'||gender== 'f'||gender== 'M'||gender== 'm')) {
-            System.out.println(gender + " must me \"f\" or  \"m\"");
+            System.out.println(gender + "is invalid. Itmust me \"f\" or  \"m\"");
             System.exit(1);
         }
         this.gender = gender;

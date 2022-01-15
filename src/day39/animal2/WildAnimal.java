@@ -1,11 +1,12 @@
-package day39.Animal2;
+package day39.animal2;
 
-public class FriendlyAnimal extends Animal{
+public class WildAnimal extends Animal{
 
     private boolean isWild, isFriendly,isPlayable;
 
-    public FriendlyAnimal(String name, String breed, String size, String color, char gender, int age, boolean isWild, boolean isFriendly, boolean isPlayable) {
+    public WildAnimal(String name, String breed, String size, String color, char gender, int age, boolean isWild, boolean isFriendly, boolean isPlayable) {
         super(name, breed, size, color, gender, age);
+
         setFriendly(isFriendly);
         setPlayable(isPlayable);
         setWild(isWild);
@@ -35,19 +36,13 @@ public class FriendlyAnimal extends Animal{
         isPlayable = playable;
     }
 
-    public void play(){
-
-        System.out.println(getName()+" "+ getBreed()+" is playing");
-    }
-
-    public void pet(){
-
-        System.out.println(getName()+" "+ getBreed()+" is a pet");
+    public void hunt(){
+        System.out.println(getName()+" "+getBreed()+" is hunting");
     }
 
     @Override
     public String toString() {
-        return "FriendlyAnimal{" +
+        return "WildAnimal{" +
                 "name='" + getName() + '\'' +
                 ", breed='" + getBreed() + '\'' +
                 ", size='" + getSize() + '\'' +
@@ -60,15 +55,3 @@ public class FriendlyAnimal extends Animal{
                 '}';
     }
 }
-
-/*
-2. Create a sub class of Animal named FriendlyAnimal:
-				Variable:
-					isWild
-					isFriendly
-					isPlayable
-
-				Extra methods:
-					play()
-					pet()
- */

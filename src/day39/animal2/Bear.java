@@ -1,4 +1,4 @@
-package day39.Animal2;
+package day39.animal2;
 
 public class Bear extends WildAnimal{
 
