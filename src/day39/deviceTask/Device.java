@@ -9,11 +9,11 @@ public class Device {
     public Device(String brand, String model, double price, boolean hasBattery, boolean hasPowerButton) {
         setBrand(brand);
         setModel(model);
+        setPrice(price);
+        setHasBattery(hasBattery);
+        setHasPowerButton(hasPowerButton);
 
-        this.model = model;
-        this.price = price;
-        this.hasBattery = hasBattery;
-        this.hasPowerButton = hasPowerButton;
+
     }
 
     public String getBrand() {
@@ -83,6 +83,16 @@ public class Device {
     }
 
 
+
+
+    public void turnOn(){
+        System.out.println(brand+" "+model+" is turn on");
+    }
+
+    public void turnOff(){
+        System.out.println(brand+" "+model+" is turn of");
+    }
+
     @Override
     public String toString() {
         return "Device{" +
@@ -93,17 +103,6 @@ public class Device {
                 ", hasPowerButton=" + hasPowerButton +
                 '}';
     }
-
-    public void turnOn(){
-        System.out.println(brand+" "+model+" is turn on");
-    }
-
-
-
-
-
-
-
 }
 
 
