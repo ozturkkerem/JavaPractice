@@ -2,7 +2,7 @@ package day39.Animal2;
 
 public class Zoo {
 
-
+Bear bear1 = new Bear("koc","Black","Big","Grey",'f',4,true,false,false);
 
 
 }
