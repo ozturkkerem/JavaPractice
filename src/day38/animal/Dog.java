@@ -1,4 +1,4 @@
-package day39.animal;
+package day38.animal;
 
 public class Dog extends Animal{
     public Dog(String name, String breed, String size, String color, int age, char gender) {
