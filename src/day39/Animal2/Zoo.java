@@ -2,8 +2,16 @@ package day39.Animal2;
 
 public class Zoo {
 
-Bear bear1 = new Bear("koc","Black","Big","Grey",'f',4,true,false,false);
+    public static void main(String[] args) {
 
+
+        Bear bear1 = new Bear("koc","Black","Big","Grey",'f',4,true,false,false);
+        Cat cat1 = new Cat("Mad","Tekir","Medium","Black",'f',3,false,false,false);
+
+
+        System.out.println(cat1);
+
+    }
 
 }
 

@@ -102,8 +102,8 @@ public class Animal {
 
     public void setGender(char gender) {
 
-        if (gender== 'F'||gender== 'f'||gender== 'M'||gender== 'm') {
-            System.out.println(gender + " must me \"f\" of  \"m\"");
+        if (!(gender== 'F'||gender== 'f'||gender== 'M'||gender== 'm')) {
+            System.out.println(gender + " must me \"f\" or  \"m\"");
             System.exit(1);
         }
         this.gender = gender;
