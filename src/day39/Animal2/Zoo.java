@@ -6,10 +6,21 @@ public class Zoo {
 
 
         Bear bear1 = new Bear("koc","Black","Big","Grey",'f',4,true,false,false);
-        Cat cat1 = new Cat("Mad","Tekir","Medium","Black",'f',3,false,false,false);
-
+        Cat cat1 = new Cat("Mad","Tekir","Medium","Black",'f',3,true,false,false);
+        Crocodile crocodile1 = new Crocodile("slow","north","Medium","Green",'F',2,true,false,false);
+        Dog dog1 = new Dog("Kurt","Sivas Kangal","Large","Grey",'M',2,false,true,true);
+        Dolphin dolphin1 = new Dolphin("Yunus", "anadolu","medium","Cream",'f',2,false,true,false);
 
         System.out.println(cat1);
+
+
+
+        bear1.drink();
+        bear1.hunt();
+        cat1.meow();
+        System.out.println(dolphin1);
+
+
 
     }
 
