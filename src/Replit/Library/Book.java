@@ -1,7 +1,9 @@
 package Replit.Library;
 
 import java.lang.reflect.Array;
+import java.sql.PreparedStatement;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Book {
 
@@ -121,7 +123,7 @@ public class Book {
             unknownAuthors++;
         }
         else {
-            author = capitalize(author);
+           this.author = capitalize(author);
         }
 
 
@@ -149,8 +151,26 @@ public class Book {
      */
     public void setTitle(String title) {
 
+        title = title.toLowerCase();
+        title = title.substring(0,1).toUpperCase()+title.substring(1);
+        String result = "";
 
+        if (title.isEmpty() || title.isBlank() || title == null)
+        {
+            this.title = "";
 
+        }
+
+        String [] titles = title.split(" ");
+
+        for (String each : titles) {
+            if (isTitleWord(each)){
+                result+=  capitalize(each);
+            }
+             else
+                 result+= each;
+        }
+        this.title=result;
 
     }
 
@@ -160,13 +180,15 @@ public class Book {
      * Format includes author, title, id, pages of the Book object:
      * Book[author=Marufjon T, title=Selenium Cookbook, id=10, pages=300]
      */
+    @Override
     public String toString() {
-
-
-        return "";
-
+        return "Book{" +
+                "author='" + author + '\'' +
+                ", title='" + title + '\'' +
+                ", id=" + id +
+                ", pages=" + pages +
+                '}';
     }
-
 
     /**
      * Getter methods for static unknownAuthors
@@ -175,7 +197,8 @@ public class Book {
     public static int getUnknownAuthors(){
 
 
-        return 0;
+
+        return unknownAuthors;
     }
 
     /**
@@ -185,7 +208,7 @@ public class Book {
     public int getPages() {
 
 
-        return 0;
+        return pages;
     }
 
     /**
@@ -194,7 +217,7 @@ public class Book {
      */
     public void setPages(int pages) {
 
-
+this.pages=pages;
 
     }
 
@@ -203,7 +226,7 @@ public class Book {
      */
     public String getAuthor() {
 
-        return null;
+        return author;
     }
 
 
@@ -213,7 +236,7 @@ public class Book {
     public String getTitle() {
 
 
-        return null;
+        return title;
     }
 
 
@@ -223,13 +246,14 @@ public class Book {
     public int getId() {
 
 
-        return -1;
+        return id;
     }
     /**
      * public setter method for private id
      */
     public void setId(int id) {
 
+        this.id = id;
 
 
     }
