@@ -1,5 +1,8 @@
 package Replit.Library;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class Book {
 
     //instance variables for Book object
@@ -55,10 +58,24 @@ public class Book {
      isTitleWord("java") => true
 
      */
+
+    static{
+        unknownAuthors = 0;
+
+    }
     public static Boolean isTitleWord(String word) {
 
+        boolean result = true;
 
-        return null;
+        String [] arr = {"at", "by", "in", "into", "near", "of", "on", "to", "than", "via","and", "but", "for", "nor", "or", "so", "yet","a" , "an", "the"};
+
+        for (String each : arr) {
+            if (each.equalsIgnoreCase(word))
+                return false;
+        }
+
+
+        return result;
 
     }
 
@@ -76,8 +93,10 @@ public class Book {
      * ex: NO => this.id = id;
      */
     public Book(int id, String author, String title, int pages ) {
-
-
+        setId(id);
+        setAuthor(author);
+        setTitle(title);
+        setPages(pages);
 
     }
 
@@ -95,6 +114,15 @@ public class Book {
      *  b.setAuthor("") => assigns "Unknown" to this.author and unknownAuthors++
      */
     public void setAuthor(String author) {
+
+        if (author.isEmpty() || author.isBlank() || author == null)
+        {
+            setAuthor("Unknown");
+            unknownAuthors++;
+        }
+        else {
+            author = capitalize(author);
+        }
 
 
 
