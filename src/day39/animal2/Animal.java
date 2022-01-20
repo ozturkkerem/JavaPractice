@@ -118,7 +118,7 @@ public class Animal {
         this.age = age;
         if (age<= 0)
         {
-            System.out.println(age + " can not be less than 0");
+            System.out.println(age + " wrong number. 'Age' can not be less than 0");
             System.exit(1);
         }
 

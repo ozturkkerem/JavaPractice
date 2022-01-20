@@ -16,6 +16,7 @@ public class Zoo {
         Lion lion1 = new Lion("lion","anadol", "medium","grey",'F',2,true,false,false);
         Eagle eagle1 = new Eagle("Sahin","mountain","medium","grey",'M',3,true,false,false);
 
+        Bear bearYoung = new Bear("Teddy","Kutup","Large","White",'F',-99,true,true,false);
         System.out.println(cat1);
 
 
@@ -43,6 +44,7 @@ public class Zoo {
             System.out.println(each.getAge());
         }
 
+        System.out.println(bearYoung);
 
 
 
