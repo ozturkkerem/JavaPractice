@@ -1,10 +1,5 @@
 package Replit.Library;
 
-import java.lang.reflect.Array;
-import java.sql.PreparedStatement;
-import java.util.ArrayList;
-import java.util.Arrays;
-
 public class Book {
 
     //instance variables for Book object
@@ -60,24 +55,10 @@ public class Book {
      isTitleWord("java") => true
 
      */
-
-    static{
-        unknownAuthors = 0;
-
-    }
     public static Boolean isTitleWord(String word) {
 
-        boolean result = true;
 
-        String [] arr = {"at", "by", "in", "into", "near", "of", "on", "to", "than", "via","and", "but", "for", "nor", "or", "so", "yet","a" , "an", "the"};
-
-        for (String each : arr) {
-            if (each.equalsIgnoreCase(word))
-                return false;
-        }
-
-
-        return result;
+        return null;
 
     }
 
@@ -95,10 +76,8 @@ public class Book {
      * ex: NO => this.id = id;
      */
     public Book(int id, String author, String title, int pages ) {
-        setId(id);
-        setAuthor(author);
-        setTitle(title);
-        setPages(pages);
+
+
 
     }
 
@@ -116,15 +95,6 @@ public class Book {
      *  b.setAuthor("") => assigns "Unknown" to this.author and unknownAuthors++
      */
     public void setAuthor(String author) {
-
-        if (author.isEmpty() || author.isBlank() || author == null)
-        {
-            setAuthor("Unknown");
-            unknownAuthors++;
-        }
-        else {
-           this.author = capitalize(author);
-        }
 
 
 
@@ -151,26 +121,8 @@ public class Book {
      */
     public void setTitle(String title) {
 
-        title = title.toLowerCase();
-        title = title.substring(0,1).toUpperCase()+title.substring(1);
-        String result = "";
 
-        if (title.isEmpty() || title.isBlank() || title == null)
-        {
-            this.title = "";
 
-        }
-
-        String [] titles = title.split(" ");
-
-        for (String each : titles) {
-            if (isTitleWord(each)){
-                result+=  capitalize(each);
-            }
-             else
-                 result+= each;
-        }
-        this.title=result;
 
     }
 
@@ -180,15 +132,13 @@ public class Book {
      * Format includes author, title, id, pages of the Book object:
      * Book[author=Marufjon T, title=Selenium Cookbook, id=10, pages=300]
      */
-    @Override
     public String toString() {
-        return "Book{" +
-                "author='" + author + '\'' +
-                ", title='" + title + '\'' +
-                ", id=" + id +
-                ", pages=" + pages +
-                '}';
+
+
+        return "";
+
     }
+
 
     /**
      * Getter methods for static unknownAuthors
@@ -197,8 +147,7 @@ public class Book {
     public static int getUnknownAuthors(){
 
 
-
-        return unknownAuthors;
+        return 0;
     }
 
     /**
@@ -208,7 +157,7 @@ public class Book {
     public int getPages() {
 
 
-        return pages;
+        return 0;
     }
 
     /**
@@ -217,7 +166,7 @@ public class Book {
      */
     public void setPages(int pages) {
 
-this.pages=pages;
+
 
     }
 
@@ -226,7 +175,7 @@ this.pages=pages;
      */
     public String getAuthor() {
 
-        return author;
+        return null;
     }
 
 
@@ -236,7 +185,7 @@ this.pages=pages;
     public String getTitle() {
 
 
-        return title;
+        return null;
     }
 
 
@@ -246,14 +195,13 @@ this.pages=pages;
     public int getId() {
 
 
-        return id;
+        return -1;
     }
     /**
      * public setter method for private id
      */
     public void setId(int id) {
 
-        this.id = id;
 
 
     }
